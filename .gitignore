@@ -1,0 +1,34 @@
+# 🔹 Archivos de compilación
+bin/
+obj/
+*.o
+*.so
+*.dylib
+*.exe
+*.dll
+*.pdb
+*.log
+*.cache
+
+# 🔹 Configuración de usuario y editor
+.vs/
+.vscode/
+*.user
+*.suo
+
+# 🔹 Dependencias restaurables
+node_modules/
+packages/
+project.lock.json
+project.assets.json
+
+# 🔹 Archivos específicos de .NET MAUI
+Platforms/*/bin/
+Platforms/*/obj/
+Resources/Raw/*.mp3
+Resources/Raw/*.mp4
+
+# 🔹 Archivos de configuración sensible
+appsettings.Development.json
+secrets.json
+.env
