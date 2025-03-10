@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KOIPLANNER_V._0.Resources.Pages.AddPages"
+             Title="Nuevo Pedido">
+    <VerticalStackLayout>
+        <Border StrokeThickness="2" Padding="5" BackgroundColor="#618caf"  HeightRequest="70">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="0,0,40,40"/>
+            </Border.StrokeShape>
+            <Label
+         Text="Nuevo Pedido"
+       
+         FontAttributes="Bold"
+         BackgroundColor="#618caf"
+         TextColor="White"
+         FontSize="20"
+         HorizontalTextAlignment="Center"
+         VerticalTextAlignment="Center" />
+        </Border>
+
+        <?GRID PRINCIPAL?>
+        <Grid Margin="15" HorizontalOptions="Center" VerticalOptions="Center"  RowDefinitions="*,*" ColumnDefinitions="*,*">
+
+
+            <?BOTON FOTOS?>
+            <Button Text="Subir Foto" Margin="10"/>
+
+
+
+            <?GRID SECUNDARIO NOMBRE DE PRODUCTO - NOMBRE DEL CLIENTE - ESTADO DEL PEDIDO?>
+            <Grid Margin="15" HorizontalOptions="Center" VerticalOptions="Center"  RowDefinitions="*,*,*" ColumnDefinitions="*" Grid.Row="0" Grid.Column="1">
+
+                <?NOMBRE DEL PEDIDO?>
+                <Entry x:Name="nombrePedido" 
+                       VerticalOptions="Center" HorizontalOptions="Center"
+                       Placeholder="Nombre del Pedido"
+                       PlaceholderColor="Black"
+                       Grid.Row="0" Grid.Column="0"
+                       Margin="1"/>
+                <?NOMBRE DEL CLIENTE¿>
+             
+                <?LISTA DE ESTADOS DEL PEDIDO?>
+                <Picker x:Name="prioridadPedido" Grid.Row="2" Grid.Column="0" Margin="1" >
+                    <Picker.Items >
+                        <x:String>Pendiente</x:String>
+                        <x:String>En Curso</x:String>
+                        <x:String>Finalizado</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry x:Name="nombreCliente" 
+                        VerticalOptions="Center" HorizontalOptions="Center"
+                        Placeholder="Nombre del Cliente"
+                        PlaceholderColor="Black"
+                        Grid.Row="1" Grid.Column="0"
+                        Margin="1"/>
+            </Grid>
+            <?GRID PARA CARACTERISTICAS?>
+
+            <Border  StrokeThickness="2"
+                    Stroke="#ffe3e3"
+                    Background="#ffe3e3"
+                    StrokeShape="RoundRectangle 20"
+                    Grid.Row="1" Grid.Column="0"
+                    Grid.RowSpan="2"
+                    Grid.ColumnSpan="2"
+                    HeightRequest="500"
+                    WidthRequest="350"
+                    >
+                <?GRID 1?>
+                <Grid  Margin="15" HorizontalOptions="Center" VerticalOptions="Fill" 
+                       RowDefinitions="55,*" ColumnDefinitions="*" BackgroundColor="#ffe3e3"
+                       Grid.Row="1" Grid.Column="0"
+                       >
+                    <Label Text="Caracteristicas" TextColor="#618caf" FontAttributes="Bold" BackgroundColor="#ffe3e3" FontSize="Medium"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           />
+                    <?GRID 2?>
+                    <Grid RowDefinitions="*" ColumnDefinitions="150,150" Grid.Row="1" Grid.Column="0">
+                        <Label Margin="1" Text="Materiales" TextColor="#618caf" FontAttributes="Bold"
+                               Grid.Row="0" Grid.Column="0" 
+                               BackgroundColor="#ffe3e3"
+                               HorizontalTextAlignment="Center"/>
+                        <Border Margin="20" StrokeThickness="2"
+                                Stroke="#618caf"
+                                StrokeDashArray="10,5"
+                                Background="White"
+                                Padding="10"
+                                StrokeShape="RoundRectangle 20"
+                                >
+                            <Entry Margin="1" x:Name="materiales" BackgroundColor="White" 
+                               Grid.Row="0" Grid.Column="0"
+                               HeightRequest="300"
+                               WidthRequest="100"
+                               />
+                        </Border>
+                        <?GRID 3?>
+                        <Grid RowDefinitions="100,*" ColumnDefinitions="150" Grid.Row="0" Grid.Column="1" WidthRequest="150">
+                            <Label Margin="1" Text="Tamaño" TextColor="#618caf" FontAttributes="Bold"
+                             Grid.Row="0" Grid.Column="0" 
+                             BackgroundColor="#ffe3e3"
+                             HorizontalTextAlignment="Start"/>
+                            <Border Margin="20" StrokeThickness="2"
+                             Stroke="#618caf"
+                             StrokeDashArray="10,5"       
+                             Background="White"
+                             Padding="10"
+                             StrokeShape="RoundRectangle 20"
+                             HeightRequest="30"
+                             WidthRequest="85"
+                             HorizontalOptions="Start"
+                             >
+                                <Entry Margin="1" x:Name="tamaño" BackgroundColor="White" 
+                                Grid.Row="0" Grid.Column="0"
+                                HeightRequest="30"
+                                WidthRequest="80"
+                                HorizontalOptions="Start"
+                                />
+                            </Border>
+                            <Label  Text="Aclaracion del Pedido" TextColor="#618caf" FontAttributes="Bold" Grid.Row="1" Grid.Column="0"
+                                   BackgroundColor="#ffe3e3"
+                                   HorizontalOptions="Center"/>
+
+
+                            <Border Margin="20" StrokeThickness="2"
+                                 Stroke="#618caf"
+                                 StrokeDashArray="10,5"
+                                 Background="White"
+                                 Padding="10"
+                                 StrokeShape="RoundRectangle 20"
+                                 HorizontalOptions="Start"
+                                 Grid.Row="1" Grid.Column="0"
+                                 >
+                                <Entry Margin="5" x:Name="pedido" 
+                                       BackgroundColor="White" 
+                                Grid.Row="1" Grid.Column="0"
+                                    HeightRequest="250"
+                                    WidthRequest="85"
+                                />
+                                </Border>
+                        </Grid>
+                        
+                    </Grid>
+                    
+
+
+                </Grid>
+            </Border>
+
+
+        </Grid>
+        
+    </VerticalStackLayout>
+</ContentPage>

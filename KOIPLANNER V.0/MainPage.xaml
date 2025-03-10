@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KOIPLANNER_V._0.MainPage">
+
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            BackgroundColor="#618caf">
+        <Image Source="dotnet_bot.png"></Image>
+            
+        <Border Margin="20" StrokeThickness="2"
+                Stroke="#618caf"
+                Background="#ffe3e3"
+                Padding="10"
+                StrokeShape="RoundRectangle 20"
+               >
+            <Border.Shadow>
+                <Shadow Brush="Black" 
+                Offset="15,13" 
+                Opacity="0.5" 
+                Radius="10"/>
+            </Border.Shadow>
+            
+            <Entry x:Name="buscador" 
+                VerticalOptions="Center" HorizontalOptions="Fill"
+                BackgroundColor="#ffe3e3" Background="#ffe3e3" 
+                Placeholder="BUSCAR" PlaceholderColor="Black" Completed="buscadorCompleted"
+                   />
+        </Border>
+
+
+        <Grid Margin="150" HorizontalOptions="Center" VerticalOptions="Center"  RowDefinitions="Auto,Auto" ColumnDefinitions="Auto">
+
+            <Button  WidthRequest="190" HeightRequest="30"  Margin="10"  
+                     x:Name="pedidos" Clicked="pedidosClicked"
+                BackgroundColor="#ffe3e3" 
+                Text="Pedidos" TextColor="Black">
+                <Button.Shadow>
+                    <Shadow  Brush="Black" 
+                     Offset="15,13" 
+                     Opacity="0.5" 
+                     Radius="10"/>
+                </Button.Shadow>
+            </Button>
+
+
+
+            <Button Margin="10"  Grid.Row="1" Grid.Column="0"  
+                    x:Name="agregar"   Clicked="agregarClick"
+                 WidthRequest="60" HeightRequest="60" 
+                 BackgroundColor="#c9e9d2" 
+                 Text="+" TextColor="Black">
+                
+                <Button.Shadow>
+                    <Shadow  Brush="Black" 
+                     Offset="15,13" 
+                     Opacity="0.5" 
+                     Radius="10"/>
+                </Button.Shadow>
+            </Button>
+
+
+        </Grid>
+       
+
+
+    </VerticalStackLayout>
+    
+
+</ContentPage>
