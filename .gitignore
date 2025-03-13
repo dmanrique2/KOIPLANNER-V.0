@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-.vs/
-=======
 # 🔹 Archivos de compilación
 bin/
 obj/
@@ -18,6 +15,7 @@ obj/
 .vscode/
 *.user
 *.suo
+*.userprefs
 
 # 🔹 Dependencias restaurables
 node_modules/
@@ -31,8 +29,10 @@ Platforms/*/obj/
 Resources/Raw/*.mp3
 Resources/Raw/*.mp4
 
+# 🔹 Archivos de base de datos locales
+*.db
+
 # 🔹 Archivos de configuración sensible
 appsettings.Development.json
 secrets.json
 .env
->>>>>>> e795f8398db691a41cfc7f74c48f3acbdd2f71db
